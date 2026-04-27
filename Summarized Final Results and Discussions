@@ -1,1 +1,15 @@
+## Final Results and Discussion
 
+The autonomous wall-following rover was successfully implemented and demonstrated the ability to maintain a consistent distance from a wall using ultrasonic sensing and PID-based feedback control. The system was capable of making continuous real-time corrections, resulting in generally stable wall-following behavior.
+
+During the initial testing phase, several issues affected the performance and reliability of the system.
+
+The most significant problem observed during the first test was inconsistent operation, where the rover would only function intermittently. A likely cause of this issue was a **low battery condition**, which resulted in insufficient voltage being supplied to the motors. This led to reduced torque output, preventing the wheels from delivering the force required for consistent movement.
+
+Additionally, a **software-related error** was identified in the control code. This issue contributed to unstable behavior during early trials but was later corrected, leading to improved system performance and reliability.
+
+Another contributing factor was the **overall weight of the rover**. The system may have required the motors to operate near their maximum capacity. Under these conditions, any drop in battery voltage significantly affected performance, as the motors were no longer able to provide sufficient torque. This caused the rover to behave inconsistently, especially when the battery level decreased.
+
+After addressing these issues—specifically correcting the control code and improving power conditions—the rover’s performance became significantly more stable. The system responded more consistently to sensor inputs and maintained smoother wall-following behavior.
+
+Overall, this project highlighted the importance of **power management, proper control implementation, and mechanical design considerations** in mobile robotic systems. Ensuring adequate power supply, reliable code, and optimized system weight are critical for achieving stable and consistent autonomous operation.
