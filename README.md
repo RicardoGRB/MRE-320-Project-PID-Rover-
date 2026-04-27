@@ -167,7 +167,7 @@ Autonomous-Wall-Following-Rover
 
 ## Project Context
 
-This project was completed as part of a **sensors adm actuators assignment**, focusing on the integration of:
+This project was completed as part of a **sensors and actuators assignment**, focusing on the integration of:
 
 - Sensors  
 - Control algorithms  
