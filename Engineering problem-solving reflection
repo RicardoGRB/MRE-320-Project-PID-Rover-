@@ -1,0 +1,96 @@
+## Engineering Problem-Solving Reflection
+
+This project required the application of a structured engineering approach to design, build, and implement an autonomous wall-following robot. The process involved understanding the problem, applying theoretical concepts, developing a mathematical model, implementing a solution, and iterating based on testing results.
+
+---
+
+### Understanding the Problem Context
+
+The primary objective was to design a mobile robot capable of autonomously following a wall while maintaining a constant distance. This required integrating sensors, control systems, and mechanical components into a cohesive system.
+
+Key challenges included:
+
+- Obtaining accurate distance measurements in real time  
+- Maintaining stability while moving  
+- Ensuring smooth and continuous corrections  
+- Dealing with physical limitations such as power supply and mechanical constraints  
+
+Understanding these constraints was essential in defining the system requirements and overall design approach.
+
+---
+
+### Applying Engineering Principles
+
+Several engineering principles were applied throughout the project:
+
+- **Feedback control systems** were used to continuously adjust the robot’s motion  
+- A **PID controller** was implemented to minimize the error between desired and measured distance  
+- **Sensor integration** was required to obtain reliable distance measurements from ultrasonic sensors  
+- **Mechanical design principles** were considered when designing the chassis and selecting components  
+- **Embedded systems programming** was used to implement real-time control  
+
+These principles guided both the design and implementation of the system.
+
+---
+
+### Formulating the Problem Mathematically
+
+The wall-following problem was formulated as a control problem.
+
+The main variable of interest was the **distance to the wall**, and the objective was to maintain this distance at a desired value.
+
+The error was defined as:
+
+```
+Error = Desired Distance − Measured Distance
+```
+
+A PID control law was applied:
+
+```
+u(t) = Kp * e(t) + Ki * ∫e(t)dt + Kd * de(t)/dt
+```
+
+Where:
+
+- `e(t)` is the error  
+- `Kp`, `Ki`, and `Kd` are the controller gains  
+- `u(t)` is the control output used to adjust motor speeds  
+
+This mathematical model allowed the system to continuously correct its trajectory based on sensor feedback.
+
+---
+
+### Designing and Implementing the Solution
+
+The system was designed by integrating three main components:
+
+- **Sensing:** Two ultrasonic sensors were used to measure the distance to the wall  
+- **Control:** A PID controller was implemented in the microcontroller to process sensor data and compute corrections  
+- **Actuation:** Motor speeds were adjusted using differential drive, with a front omniwheel allowing smooth directional changes  
+
+A custom chassis was designed to support all components while ensuring proper alignment and stability.
+
+The implementation involved:
+
+- Writing embedded code for sensor reading and control  
+- Tuning PID parameters to achieve stable behavior  
+- Integrating hardware components into a functional system  
+
+---
+
+### Evaluating and Iterating
+
+Testing revealed several issues during initial trials, including inconsistent movement, power limitations, and minor coding errors.
+
+To improve the system:
+
+- The control code was debugged and corrected  
+- Power-related issues were addressed to ensure sufficient motor torque  
+- The system behavior was re-evaluated after each modification  
+
+This iterative process allowed the rover’s performance to improve over time, resulting in more stable and reliable wall-following behavior.
+
+---
+
+Overall, this project demonstrated the importance of a structured engineering approach, combining theoretical knowledge with practical implementation and iterative refinement to solve a complex real-world problem.
