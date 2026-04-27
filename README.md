@@ -150,15 +150,17 @@ Autonomous-Wall-Following-Rover
 ├── code
 │   └── rover_control
 │
-├── hardware
-│   ├── chassis_design
+├── diagrams and Pictures
+│   ├── chassis/solidworks
 │   └── wiring_diagrams
+│   └──pictures
 │
 ├── data
-│   └── test_logs
 │
-└── Conclusion
-    └── project_report.pdf
+├── engineering problem solving
+│
+└── final results
+
 ```
 
 ---
