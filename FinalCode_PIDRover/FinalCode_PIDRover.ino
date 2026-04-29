@@ -14,7 +14,7 @@ const int   BASE_SPEED      = 90;    // 0–255 PWM base
 const int   MAX_ADJUST      = 80;    // Max PID correction added/removed
 
 // ── Motor Trim ───────────────────────────────────────────
-// Boosting the weak left motor instead of slowing the strong right
+// Boosting the weak left motor
 const int LEFT_TRIM = 28;
 
 // ── PID Gains ────────────────────────────────────────────
