@@ -12,4 +12,6 @@ Another contributing factor was the **overall weight of the rover**. The system 
 
 After addressing these issues—specifically correcting the control code and improving power conditions—the rover’s performance became significantly more stable. The system responded more consistently to sensor inputs and maintained smoother wall-following behavior.
 
+Even after the corrections, the car would oscillate a little on the line of 30 cm. However, it was clear the rover was following the wall.
+
 Overall, this project highlighted the importance of **power management, proper control implementation, and mechanical design considerations** in mobile robotic systems. Ensuring adequate power supply, reliable code, and optimized system weight are critical for achieving stable and consistent autonomous operation.
