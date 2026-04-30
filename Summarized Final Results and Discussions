@@ -12,7 +12,7 @@ This led to reduced torque output, preventing the wheels from delivering the for
 Additionally, a software-related error was identified in the control code. 
 This issue contributed to unstable behavior during early trials but was later corrected, leading to improved system performance and reliability.
 
-Another contributing factor was the **overall weight of the rover**. 
+Another contributing factor was the overall weight of the rover. 
 The system may have required the motors to operate near their maximum capacity. 
 Under these conditions, any drop in battery voltage significantly affected performance, as the motors were no longer able to provide sufficient torque.
 This caused the rover to behave inconsistently, especially when the battery level decreased.
