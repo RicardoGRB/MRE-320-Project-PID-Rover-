@@ -4,8 +4,8 @@ The autonomous wall-following rover was successfully implemented and demonstrate
 The system was capable of making continuous real-time corrections, resulting in generally stable wall-following behavior.
 
 During the initial testing phase, several issues affected the performance and reliability of the system.
-
 The most significant problem observed during the first test was inconsistent operation, where the rover would only function intermittently. 
+
 A likely cause of this issue was a low battery condition, which resulted in insufficient voltage being supplied to the motors. 
 This led to reduced torque output, preventing the wheels from delivering the force required for consistent movement.
 
@@ -23,5 +23,9 @@ The system responded more consistently to sensor inputs and maintained smoother 
 Even after the corrections, the car would oscillate a little on the line of 30 cm. 
 However, it was clear the rover was following the wall.
 
-Overall, this project highlighted the importance of **power management, proper control implementation, and mechanical design considerations** in mobile robotic systems.
+It is important to note that on presentation day the rover was acting up initally. 
+This is something that had never happened during testing and miraculously went away after a few minutes of running it.
+Other than that, it worked as intended.
+
+Overall, this project highlighted the importance of power management, proper control implementation, and mechanical design considerations in mobile robotic systems.
 Ensuring adequate power supply, reliable code, and optimized system weight are critical for achieving stable and consistent autonomous operation.
