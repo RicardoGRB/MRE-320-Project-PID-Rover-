@@ -25,3 +25,13 @@ While the rover was driving relativly straight now, there was still an oscilatio
 The culprit for this was the PID controls themselves. This was a simple fix.
 All it took was adjusting the K_p value. 
 This tells the system how much it needs to adjust proportionally when the car is too far or close to the wall.
+We also adjusted the angle error multiplier to hopefully reduce the oscilation. 
+We settled on the values of 1.5 for K_p and the angle error multiplier of 0.6.
+This still has some slight oscilations, however, changing the K_p any more lead to less consitent or worse results.
+
+The final adjustment was accounting for the locstion of the sensors. 
+The goal is for the fartherst right side of the car to be 30 mm away, however, the sensors are not the furthest right of the car.
+To account for this all we needed to do is set the goal distance to be 30 + the distance of the sensors from the right most of the car.
+This eneded up being a little over 32 cm total, so we set the goal distance to 32. 
+
+In the end, the rover still oscilated a slight amount, but drove much better than it did orignally. 
