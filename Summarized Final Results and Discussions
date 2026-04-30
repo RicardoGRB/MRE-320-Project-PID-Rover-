@@ -6,7 +6,7 @@ The system was capable of making continuous real-time corrections, resulting in 
 During the initial testing phase, several issues affected the performance and reliability of the system.
 
 The most significant problem observed during the first test was inconsistent operation, where the rover would only function intermittently. 
-A likely cause of this issue was a **low battery condition**, which resulted in insufficient voltage being supplied to the motors. 
+A likely cause of this issue was a low battery condition, which resulted in insufficient voltage being supplied to the motors. 
 This led to reduced torque output, preventing the wheels from delivering the force required for consistent movement.
 
 Additionally, a software-related error was identified in the control code. 
