@@ -1,0 +1,13 @@
+## Performance Errors
+
+In the very first stages of the code, where we had the rover working, the car would barely work and needed multiple adjustments.
+
+The very first thing that needed adjusted was the speed of the motors.
+When the car was told to just go straight, it would curve to the left roughly 40 degrees over a 3 second period.
+This means, that the right motor was spinning faster than the left motor.
+In order to fix this, we implimented an adjustment to the speeds so the code could make up for the mis-match.
+Origianlly, we implimented a trim on the right motor, which would make the right motor spin less and match the left.
+This worked at first and would drive relativly striaght, however, the wheel would occasionally quit spinning.
+The cause we found for this was the friction in the gearbox would slow down the wheel if the speed was too low. 
+The new solution we came up with was to increase the speed of the left wheel in order to match the right wheel.
+This is very similar to the trim, however it is just the opposite. 
