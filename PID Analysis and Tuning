@@ -3,35 +3,35 @@
 In the very first stages of the code, where we had the rover working, the car would barely work and needed multiple adjustments.
 
 The very first thing that needed adjusted was the speed of the motors.
-When the car was told to just go straight, it would curve to the left roughly 40 degrees over a 3 second period.
-This means, that the right motor was spinning faster than the left motor.
-In order to fix this, we implimented an adjustment to the speeds so the code could make up for the mis-match.
-Origianlly, we implimented a trim on the right motor, which would make the right motor spin less and match the left.
-This worked at first and would drive relativly striaght, however, the wheel would occasionally quit spinning.
+When the car was told to just go straight, it would curve to the left roughly 40 degrees over a 3-second period.
+This means that the right motor was spinning faster than the left motor.
+In order to fix this, we implemented an adjustment to the speeds so the code could make up for the mismatch.
+Originally, we implemented a trim on the right motor, which would make the right motor spin less and match the left.
+This worked at first and would drive relatively straight; however, the wheel would occasionally quit spinning.
 The cause we found for this was the friction in the gearbox would slow down the wheel if the speed was too low. 
 The new solution we came up with was to increase the speed of the left wheel in order to match the right wheel.
-This is very similar to the trim, however it is just the opposite. 
-This resulted in the rover driving mostly straight. There was a slight turn, however, the PID controls can account for it.
+This is very similar to the trim; however, it is just the opposite. 
+This adjustment resulted in the rover driving mostly straight. There was a slight turn; however, the PID controls can account for it.
 
-The next step was to make sure the ultrasonic sensors were providing the correct data.
-We noticed that the ultrasonic sensors would often have miss readings of either 0 or 999. 
-To prevent this, we added a filter to the code that would filter out readings that are below 1 or above 400.
+The next step was to verify that the ultrasonic sensors were providing the correct data.
+We noticed that the ultrasonic sensors would often have misreadings of either 0 or 999. 
+To prevent these issues, we added a filter to the code that would filter out readings that are below 1 or above 400.
 It would ignore the filtered out values and only take the valid ones.
 Secondly, the readings varied quite a bit, which would lead to jagged movements.
 The way we fixed this is we added a function that would take the median of 5 values.
-This lead to much more consitentent values fed to the code, which means there would be less jagged and sudden turns.
+This led to much more consistent values fed to the code, which means there would be fewer jagged and sudden turns.
 
-While the rover was driving relativly straight now, there was still an oscilation. 
+While the rover was driving relatively straight now, there was still an oscillation. 
 The culprit for this was the PID controls themselves. This was a simple fix.
 All it took was adjusting the K_p value. 
 This tells the system how much it needs to adjust proportionally when the car is too far or close to the wall.
-We also adjusted the angle error multiplier to hopefully reduce the oscilation. 
+We also adjusted the angle error multiplier to hopefully reduce the oscillation. 
 We settled on the values of 1.5 for K_p and the angle error multiplier of 0.6.
-This still has some slight oscilations, however, changing the K_p any more lead to less consitent or worse results.
+This still has some slight oscillations; however, changing the K_p any more leads to less consistent or worse results.
 
-The final adjustment was accounting for the locstion of the sensors. 
-The goal is for the fartherst right side of the car to be 30 mm away, however, the sensors are not the furthest right of the car.
-To account for this all we needed to do is set the goal distance to be 30 + the distance of the sensors from the right most of the car.
-This eneded up being a little over 32 cm total, so we set the goal distance to 32. 
+The final adjustment was accounting for the location of the sensors. 
+The goal is for the farthest right side of the car to be 30 mm away; however, the sensors are not the farthest right of the car.
+To account for this, all we needed to do was set the goal distance to be 30 + the distance of the sensors from the rightmost of the car.
+This ended up being a little over 32 cm total, so we set the goal distance to 32. 
 
-In the end, the rover still oscilated a slight amount, but drove much better than it did orignally. 
+In the end, the rover still oscillated a slight amount but drove much better than it did originally. 
